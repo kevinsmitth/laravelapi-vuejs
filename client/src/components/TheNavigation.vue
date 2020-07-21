@@ -1,26 +1,28 @@
 <template>
-    <ul>
-        <li>
-            <router-link :to="{name:'home'}">Home</router-link>
-        </li>   
-        <template v-if="authenticated">
+    <b-container>
+        <ul>
             <li>
-                {{user.name}}
-            </li>
-            <li>
-                <router-link :to="{name:'dashboard'}">Dashboard</router-link>
-            </li>
+                <router-link :to="{name:'home'}">Home</router-link>
+            </li>   
+            <template v-if="authenticated">
+                <li>
+                    {{user.name}}
+                </li>
+                <li>
+                    <router-link :to="{name:'dashboard'}">Dashboard</router-link>
+                </li>
 
-            <li>
-                <a href="#" @click.prevent="signOut">Sign Out</a>
-            </li>
-        </template>
-        <template v-else>
-            <li>
-                <router-link :to="{name:'signin'}">Sign In</router-link>
-            </li>
-        </template>
-    </ul>
+                <li>
+                    <a href="#" @click.prevent="signOut">Sign Out</a>
+                </li>
+            </template>
+            <template v-else>
+                <li>
+                    <router-link :to="{name:'signin'}">Sign In</router-link>
+                </li>
+            </template>
+        </ul>
+    </b-container>
 </template>
 
 <script>
@@ -49,3 +51,12 @@
             
     }
 </script>
+
+<style>
+li{
+    list-style-type: none;
+    display: inline-flex;
+    margin: 10px;
+}
+
+</style>

@@ -1,7 +1,9 @@
 <template>
-  <div>
-    Home
-  </div>
+  <b-container>
+    <div> 
+      Pagina Home
+    </div>
+  </b-container>
 </template>
 
 <script>

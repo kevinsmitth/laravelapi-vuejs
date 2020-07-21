@@ -1,18 +1,20 @@
 <template>
-    <form @submit.prevent="submit">
-        <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" v-model="form.email">
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" v-model="form.password">
-        </div>
+    <b-container>
+        <form @submit.prevent="submit" class="text-center">
+            <div>
+                <label for="email">Email</label>
+                <b-input type="text" name="email" id="email" v-model="form.email"></b-input>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <b-input type="password" name="password" id="password" v-model="form.password"></b-input>
+            </div>
 
-        <div>
-            <button type="submit">Sign In</button>
-        </div>
-    </form>
+            <div>
+                <b-button id="submit" variant="success" type="submit">Sign In</b-button>
+            </div>
+        </form>
+    </b-container>
 </template>
 
 <script>
@@ -50,3 +52,18 @@ export default {
   }
 }
 </script>
+
+<style>
+form{
+    width: 300px;
+    background-color: #ddd;
+    padding: 10px;
+    margin: 0 auto;
+}
+label{
+    margin: 10px;
+}
+#submit{
+    margin-top: 10px;
+}
+</style>
