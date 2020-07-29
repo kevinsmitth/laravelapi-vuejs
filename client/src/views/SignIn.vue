@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="">
 form{
     width: 300px;
     background-color: #ddd;

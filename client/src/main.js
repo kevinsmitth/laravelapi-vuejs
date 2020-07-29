@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios'
+//import io from 'socket.io-client'
 import "./plugins/boostrap-vue"
 
 require('@/store/subscriber')

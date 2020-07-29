@@ -15,6 +15,9 @@
                 <li>
                     <a href="#" @click.prevent="signOut">Sign Out</a>
                 </li>
+                <li>
+                    <router-link :to="{name:'chat'}">Chat</router-link>
+                </li>
             </template>
             <template v-else>
                 <li>
@@ -57,6 +60,14 @@ li{
     list-style-type: none;
     display: inline-flex;
     margin: 10px;
+}
+
+a{
+    color: green !important;
+    text-decoration: none !important;
+}
+a:hover{
+    color: rgb(6, 219, 6) !important;
 }
 
 </style>

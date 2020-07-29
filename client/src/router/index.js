@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import SignIn from '../views/SignIn.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Chat from '../views/Chat.vue'
 import store from '@/store'
 
 Vue.use(VueRouter)
@@ -17,6 +18,20 @@ Vue.use(VueRouter)
     path: '/signin',
     name: 'signin',
     component: SignIn
+  },
+  {
+    path: '/chat',
+    name: 'chat',
+    component: Chat,
+    beforeEnter: (to, from, next) => {
+      if (!store.getters['auth/authenticated']) {
+        return next({
+          name: 'signin'
+        })
+      }
+
+      next()
+    }
   },
   {
     path: '/dashboard',
